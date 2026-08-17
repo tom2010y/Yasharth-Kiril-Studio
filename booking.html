@@ -1,0 +1,1784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Book a Project — Kiril Studio
+    </title>
+
+    <meta
+        name="description"
+        content="Book a website, video editing or digital service with Kiril Studio."
+    >
+
+    <meta
+        name="theme-color"
+        content="#090909"
+    >
+
+    <style>
+
+        :root {
+
+            --black: #090909;
+            --white: #f4f4f0;
+            --grey: #8c8c87;
+            --line: rgba(255,255,255,.14);
+
+            --accent: #d8ff35;
+
+        }
+
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        html {
+
+            scroll-behavior: smooth;
+
+        }
+
+
+        body {
+
+            background: var(--black);
+
+            color: var(--white);
+
+            font-family:
+                Inter,
+                Helvetica Neue,
+                Arial,
+                sans-serif;
+
+            min-height: 100vh;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        .container {
+
+            width:
+                min(
+                    1100px,
+                    calc(100% - 40px)
+                );
+
+            margin: auto;
+
+        }
+
+
+        /* HEADER */
+
+        header {
+
+            padding: 25px 0;
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+        }
+
+
+        .logo {
+
+            font-weight: 700;
+
+            letter-spacing: -.05em;
+
+        }
+
+
+        .logo span {
+
+            color: var(--grey);
+
+            font-weight: 400;
+
+        }
+
+
+        .back {
+
+            color: var(--grey);
+
+            font-size: 13px;
+
+            transition:
+                color .2s ease;
+
+        }
+
+
+        .back:hover {
+
+            color: white;
+
+        }
+
+
+        /* HERO */
+
+        .hero {
+
+            padding:
+                100px 0 70px;
+
+        }
+
+
+        .eyebrow {
+
+            color: var(--grey);
+
+            text-transform: uppercase;
+
+            letter-spacing: .16em;
+
+            font-size: 11px;
+
+        }
+
+
+        h1 {
+
+            margin-top: 25px;
+
+            max-width: 800px;
+
+            font-size:
+                clamp(
+                    55px,
+                    9vw,
+                    110px
+                );
+
+            line-height: .88;
+
+            letter-spacing: -.075em;
+
+            font-weight: 500;
+
+        }
+
+
+        .hero p {
+
+            max-width: 550px;
+
+            margin-top: 30px;
+
+            color: var(--grey);
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* BOOKING */
+
+        .booking {
+
+            padding:
+                40px 0 140px;
+
+        }
+
+
+        .booking-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                .7fr 1.3fr;
+
+            gap: 80px;
+
+        }
+
+
+        /* SUMMARY */
+
+        .summary {
+
+            border-top:
+                1px solid var(--line);
+
+        }
+
+
+        .summary-row {
+
+            padding:
+                20px 0;
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .summary-label {
+
+            color: var(--grey);
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .12em;
+
+        }
+
+
+        .summary-value {
+
+            margin-top: 7px;
+
+            font-size: 18px;
+
+        }
+
+
+        .summary-price {
+
+            font-size: 45px;
+
+            letter-spacing: -.06em;
+
+            color: var(--accent);
+
+        }
+
+
+        /* FORM */
+
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 25px;
+
+        }
+
+
+        .form-section {
+
+            padding-bottom: 35px;
+
+            border-bottom:
+                1px solid var(--line);
+
+        }
+
+
+        .form-title {
+
+            margin-bottom: 20px;
+
+            font-size: 20px;
+
+            letter-spacing: -.03em;
+
+        }
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #aaa;
+
+            font-size: 11px;
+
+            text-transform: uppercase;
+
+            letter-spacing: .1em;
+
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            background: transparent;
+
+            color: white;
+
+            border:
+                1px solid var(--line);
+
+            padding: 15px;
+
+            outline: none;
+
+            border-radius: 0;
+
+        }
+
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+
+            border-color:
+                var(--accent);
+
+        }
+
+
+        select option {
+
+            background: #111;
+
+        }
+
+
+        .field {
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .two-columns {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        /* SERVICES */
+
+        .services {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 10px;
+
+        }
+
+
+        .service-option {
+
+            position: relative;
+
+        }
+
+
+        .service-option input {
+
+            position: absolute;
+
+            opacity: 0;
+
+        }
+
+
+        .service-card {
+
+            display: block;
+
+            padding: 22px;
+
+            min-height: 120px;
+
+            border:
+                1px solid var(--line);
+
+            cursor: pointer;
+
+            transition:
+                border .25s ease,
+                background .25s ease;
+
+        }
+
+
+        .service-card strong {
+
+            display: block;
+
+            font-size: 17px;
+
+        }
+
+
+        .service-card span {
+
+            display: block;
+
+            margin-top: 10px;
+
+            color: var(--grey);
+
+            font-size: 12px;
+
+        }
+
+
+        .service-option input:checked
+        + .service-card {
+
+            border-color:
+                var(--accent);
+
+            background:
+                rgba(216,255,53,.06);
+
+        }
+
+
+        /* BUTTON */
+
+        .submit {
+
+            padding:
+                18px 25px;
+
+            background:
+                var(--accent);
+
+            color: #000;
+
+            border: none;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition:
+                transform .25s ease;
+
+        }
+
+
+        .submit:hover {
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        .notice {
+
+            color: #666;
+
+            font-size: 11px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* SUCCESS */
+
+        .success {
+
+            display: none;
+
+            padding: 60px;
+
+            border:
+                1px solid var(--accent);
+
+            background:
+                rgba(216,255,53,.04);
+
+        }
+
+
+        .success h2 {
+
+            font-size: 50px;
+
+            letter-spacing: -.06em;
+
+        }
+
+
+        .success p {
+
+            margin-top: 15px;
+
+            color: var(--grey);
+
+        }
+
+
+        .success a {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            color: var(--accent);
+
+        }
+
+
+        @media(max-width:800px) {
+
+            .booking-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+
+            }
+
+
+            .services {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width:550px) {
+
+            .two-columns {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero {
+
+                padding-top: 70px;
+
+            }
+
+
+            .success {
+
+                padding: 30px;
+
+            }
+
+
+            .success h2 {
+
+                font-size: 38px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                KIRIL <span>STUDIO</span>
+            </a>
+
+
+            <a
+                href="index.html"
+                class="back"
+            >
+                ← Back to studio
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="eyebrow">
+            Project booking
+        </div>
+
+
+        <h1>
+            Let's plan
+            your project.
+        </h1>
+
+
+        <p>
+
+            Choose the service you're interested in,
+            select a preferred date and provide a few
+            details about what you need.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="booking">
+
+    <div class="container">
+
+        <div class="booking-grid">
+
+
+            <!-- SUMMARY -->
+
+            <aside>
+
+                <div class="eyebrow">
+                    Your booking
+                </div>
+
+
+                <div
+                    class="summary"
+                    style="margin-top:25px;"
+                >
+
+                    <div class="summary-row">
+
+                        <div class="summary-label">
+                            Service
+                        </div>
+
+                        <div
+                            class="summary-value"
+                            id="summaryService"
+                        >
+                            Select a service
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <div class="summary-label">
+                            Package
+                        </div>
+
+                        <div
+                            class="summary-value"
+                            id="summaryPackage"
+                        >
+                            Select a package
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <div class="summary-label">
+                            Date
+                        </div>
+
+                        <div
+                            class="summary-value"
+                            id="summaryDate"
+                        >
+                            Select a date
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <div class="summary-label">
+                            Time
+                        </div>
+
+                        <div
+                            class="summary-value"
+                            id="summaryTime"
+                        >
+                            Select a time
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <div class="summary-label">
+                            Starting price
+                        </div>
+
+                        <div
+                            class="summary-price"
+                            id="summaryPrice"
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- FORM -->
+
+            <div>
+
+                <form id="bookingForm">
+
+
+                    <!-- SERVICE -->
+
+                    <div class="form-section">
+
+                        <div class="form-title">
+                            01 — Choose a service
+                        </div>
+
+
+                        <div class="services">
+
+
+                            <div class="service-option">
+
+                                <input
+                                    type="radio"
+                                    name="service"
+                                    id="website"
+                                    value="Website"
+                                    data-price="60"
+                                    required
+                                >
+
+                                <label
+                                    for="website"
+                                    class="service-card"
+                                >
+
+                                    <strong>
+                                        Website
+                                    </strong>
+
+                                    <span>
+                                        From €60
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="service-option">
+
+                                <input
+                                    type="radio"
+                                    name="service"
+                                    id="video"
+                                    value="Video Editing"
+                                    data-price="25"
+                                >
+
+                                <label
+                                    for="video"
+                                    class="service-card"
+                                >
+
+                                    <strong>
+                                        Video
+                                    </strong>
+
+                                    <span>
+                                        From €25
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                            <div class="service-option">
+
+                                <input
+                                    type="radio"
+                                    name="service"
+                                    id="digital"
+                                    value="Digital Support"
+                                    data-price="30"
+                                >
+
+                                <label
+                                    for="digital"
+                                    class="service-card"
+                                >
+
+                                    <strong>
+                                        Digital
+                                    </strong>
+
+                                    <span>
+                                        From €30
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PACKAGE -->
+
+                    <div class="form-section">
+
+                        <div class="form-title">
+                            02 — Choose a package
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="package">
+                                Package
+                            </label>
+
+
+                            <select
+                                id="package"
+                                name="package"
+                                required
+                            >
+
+                                <option value="">
+                                    Select a package
+                                </option>
+
+                                <option
+                                    value="Starter Website"
+                                    data-price="60"
+                                    data-service="Website"
+                                >
+                                    Starter Website — €60
+                                </option>
+
+                                <option
+                                    value="Business Website"
+                                    data-price="120"
+                                    data-service="Website"
+                                >
+                                    Business Website — €120
+                                </option>
+
+                                <option
+                                    value="Custom Website"
+                                    data-price="200+"
+                                    data-service="Website"
+                                >
+                                    Custom Website — €200+
+                                </option>
+
+                                <option
+                                    value="Short-form Video"
+                                    data-price="25"
+                                    data-service="Video Editing"
+                                >
+                                    Short-form Video — €25
+                                </option>
+
+                                <option
+                                    value="YouTube Editing"
+                                    data-price="40"
+                                    data-service="Video Editing"
+                                >
+                                    YouTube Editing — €40
+                                </option>
+
+                                <option
+                                    value="Digital Support"
+                                    data-price="30"
+                                    data-service="Digital Support"
+                                >
+                                    Digital Support — €30
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATE -->
+
+                    <div class="form-section">
+
+                        <div class="form-title">
+                            03 — Preferred date & time
+                        </div>
+
+
+                        <div class="two-columns">
+
+
+                            <div class="field">
+
+                                <label for="date">
+                                    Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date"
+                                    name="date"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="time">
+                                    Time
+                                </label>
+
+                                <select
+                                    id="time"
+                                    name="time"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select time
+                                    </option>
+
+                                    <option value="09:00">
+                                        09:00
+                                    </option>
+
+                                    <option value="10:00">
+                                        10:00
+                                    </option>
+
+                                    <option value="11:00">
+                                        11:00
+                                    </option>
+
+                                    <option value="12:00">
+                                        12:00
+                                    </option>
+
+                                    <option value="14:00">
+                                        14:00
+                                    </option>
+
+                                    <option value="15:00">
+                                        15:00
+                                    </option>
+
+                                    <option value="16:00">
+                                        16:00
+                                    </option>
+
+                                    <option value="17:00">
+                                        17:00
+                                    </option>
+
+                                    <option value="18:00">
+                                        18:00
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DETAILS -->
+
+                    <div class="form-section">
+
+                        <div class="form-title">
+                            04 — Your details
+                        </div>
+
+
+                        <div class="two-columns">
+
+
+                            <div class="field">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="business">
+                                Business / Channel
+                            </label>
+
+                            <input
+                                type="text"
+                                id="business"
+                                name="business"
+                                placeholder="Optional"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label for="message">
+                                Project details
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Tell me what you want to build, edit or improve..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="submit"
+                        type="submit"
+                    >
+                        Request booking →
+                    </button>
+
+
+                    <p class="notice">
+
+                        This is a booking request, not an
+                        automatic confirmation. The requested
+                        time must be checked before the project
+                        is confirmed.
+
+                    </p>
+
+
+                </form>
+
+
+                <div
+                    class="success"
+                    id="success"
+                >
+
+                    <h2>
+                        Request received.
+                    </h2>
+
+                    <p>
+
+                        Your booking request has been prepared.
+                        The requested date and time will be
+                        checked before confirmation.
+
+                    </p>
+
+
+                    <a href="index.html">
+                        ← Return to Kiril Studio
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+
+    /* ELEMENTS */
+
+    const form =
+        document.getElementById(
+            "bookingForm"
+        );
+
+
+    const serviceInputs =
+        document.querySelectorAll(
+            'input[name="service"]'
+        );
+
+
+    const packageSelect =
+        document.getElementById(
+            "package"
+        );
+
+
+    const dateInput =
+        document.getElementById(
+            "date"
+        );
+
+
+    const timeInput =
+        document.getElementById(
+            "time"
+        );
+
+
+    const summaryService =
+        document.getElementById(
+            "summaryService"
+        );
+
+
+    const summaryPackage =
+        document.getElementById(
+            "summaryPackage"
+        );
+
+
+    const summaryDate =
+        document.getElementById(
+            "summaryDate"
+        );
+
+
+    const summaryTime =
+        document.getElementById(
+            "summaryTime"
+        );
+
+
+    const summaryPrice =
+        document.getElementById(
+            "summaryPrice"
+        );
+
+
+    /* EMAIL */
+
+    const BUSINESS_EMAIL =
+        "YOUR_EMAIL@example.com";
+
+
+    /* PREVENT PAST DATES */
+
+    const today =
+        new Date()
+            .toISOString()
+            .split("T")[0];
+
+
+    dateInput.min = today;
+
+
+    /* URL PARAMETERS */
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const serviceParam =
+        params.get("service");
+
+
+    const packageParam =
+        params.get("package");
+
+
+    if (serviceParam) {
+
+        const serviceMap = {
+
+            website:
+                "website",
+
+            video:
+                "video",
+
+            digital:
+                "digital"
+
+        };
+
+
+        const target =
+            document.getElementById(
+                serviceMap[
+                    serviceParam.toLowerCase()
+                ]
+            );
+
+
+        if (target) {
+
+            target.checked = true;
+
+            updateService();
+
+        }
+
+    }
+
+
+    if (packageParam) {
+
+        const packageMap = {
+
+            starter:
+                "Starter Website",
+
+            business:
+                "Business Website",
+
+            custom:
+                "Custom Website",
+
+            shorts:
+                "Short-form Video",
+
+            youtube:
+                "YouTube Editing",
+
+            digital:
+                "Digital Support"
+
+        };
+
+
+        const targetPackage =
+            packageMap[
+                packageParam.toLowerCase()
+            ];
+
+
+        if (targetPackage) {
+
+            packageSelect.value =
+                targetPackage;
+
+            updatePackage();
+
+        }
+
+    }
+
+
+    /* SERVICE */
+
+    serviceInputs.forEach(
+        input => {
+
+            input.addEventListener(
+                "change",
+                updateService
+            );
+
+        }
+    );
+
+
+    function updateService() {
+
+        const selected =
+            document.querySelector(
+                'input[name="service"]:checked'
+            );
+
+
+        if (!selected) {
+
+            return;
+
+        }
+
+
+        summaryService.textContent =
+            selected.value;
+
+
+        updatePackageOptions();
+
+        updatePrice();
+
+    }
+
+
+    /* PACKAGE FILTER */
+
+    function updatePackageOptions() {
+
+        const selected =
+            document.querySelector(
+                'input[name="service"]:checked'
+            );
+
+
+        if (!selected) {
+
+            return;
+
+        }
+
+
+        const service =
+            selected.value;
+
+
+        Array.from(
+            packageSelect.options
+        ).forEach(
+            option => {
+
+                if (!option.value) {
+
+                    return;
+
+                }
+
+
+                const optionService =
+                    option.dataset.service;
+
+
+                option.hidden =
+                    optionService !== service;
+
+            }
+        );
+
+
+        const current =
+            packageSelect
+                .options[
+                    packageSelect.selectedIndex
+                ];
+
+
+        if (
+            current &&
+            current.dataset.service !== service
+        ) {
+
+            packageSelect.value = "";
+
+            summaryPackage.textContent =
+                "Select a package";
+
+        }
+
+    }
+
+
+    /* PACKAGE */
+
+    packageSelect.addEventListener(
+        "change",
+        updatePackage
+    );
+
+
+    function updatePackage() {
+
+        const option =
+            packageSelect
+                .options[
+                    packageSelect.selectedIndex
+                ];
+
+
+        if (!option || !option.value) {
+
+            summaryPackage.textContent =
+                "Select a package";
+
+            updatePrice();
+
+            return;
+
+        }
+
+
+        summaryPackage.textContent =
+            option.value;
+
+
+        updatePrice();
+
+    }
+
+
+    /* PRICE */
+
+    function updatePrice() {
+
+        const option =
+            packageSelect
+                .options[
+                    packageSelect.selectedIndex
+                ];
+
+
+        if (
+            option &&
+            option.dataset.price
+        ) {
+
+            summaryPrice.textContent =
+                "€"
+                + option.dataset.price;
+
+        } else {
+
+            const selected =
+                document.querySelector(
+                    'input[name="service"]:checked'
+                );
+
+
+            if (selected) {
+
+                summaryPrice.textContent =
+                    "€"
+                    + selected.dataset.price;
+
+            } else {
+
+                summaryPrice.textContent =
+                    "—";
+
+            }
+
+        }
+
+    }
+
+
+    /* DATE */
+
+    dateInput.addEventListener(
+        "change",
+        () => {
+
+            if (!dateInput.value) {
+
+                summaryDate.textContent =
+                    "Select a date";
+
+                return;
+
+            }
+
+
+            const date =
+                new Date(
+                    dateInput.value
+                    + "T12:00:00"
+                );
+
+
+            summaryDate.textContent =
+                date.toLocaleDateString(
+                    "en-GB",
+                    {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric"
+                    }
+                );
+
+        }
+    );
+
+
+    /* TIME */
+
+    timeInput.addEventListener(
+        "change",
+        () => {
+
+            summaryTime.textContent =
+                timeInput.value
+                || "Select a time";
+
+        }
+    );
+
+
+    /* SUBMIT */
+
+    form.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const service =
+                document.querySelector(
+                    'input[name="service"]:checked'
+                );
+
+
+            if (!service) {
+
+                alert(
+                    "Please select a service."
+                );
+
+                return;
+
+            }
+
+
+            const packageName =
+                packageSelect.value;
+
+
+            const date =
+                dateInput.value;
+
+
+            const time =
+                timeInput.value;
+
+
+            const name =
+                document.getElementById(
+                    "name"
+                ).value;
+
+
+            const email =
+                document.getElementById(
+                    "email"
+                ).value;
+
+
+            const business =
+                document.getElementById(
+                    "business"
+                ).value;
+
+
+            const message =
+                document.getElementById(
+                    "message"
+                ).value;
+
+
+            const subject =
+                encodeURIComponent(
+                    "New booking — "
+                    + packageName
+                );
+
+
+            const body =
+                encodeURIComponent(
+
+                    "NEW KIRIL STUDIO BOOKING"
+
+                    + "\n\n"
+
+                    + "CLIENT"
+                    + "\nName: "
+                    + name
+
+                    + "\nEmail: "
+                    + email
+
+                    + "\nBusiness / Channel: "
+                    + business
+
+                    + "\n\nSERVICE"
+                    + "\nService: "
+                    + service.value
+
+                    + "\nPackage: "
+                    + packageName
+
+                    + "\nStarting price: €"
+                    + (
+                        packageSelect
+                            .options[
+                                packageSelect.selectedIndex
+                            ]
+                            .dataset
+                            .price
+                        || service.dataset.price
+                    )
+
+                    + "\n\nBOOKING"
+                    + "\nPreferred date: "
+                    + date
+
+                    + "\nPreferred time: "
+                    + time
+
+                    + "\n\nPROJECT DETAILS"
+                    + "\n"
+                    + message
+
+                );
+
+
+            /*
+                Opens the client's email application
+                with the complete booking request.
+            */
+
+            window.location.href =
+                "mailto:"
+                + BUSINESS_EMAIL
+                + "?subject="
+                + subject
+                + "&body="
+                + body;
+
+
+            form.style.display =
+                "none";
+
+
+            document
+                .getElementById("success")
+                .style.display =
+                "block";
+
+        }
+    );
+
+
+    /* INITIALISE */
+
+    updateService();
+
+</script>
+
+
+</body>
+
+</html>
